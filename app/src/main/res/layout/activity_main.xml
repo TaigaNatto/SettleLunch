@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="4dp">
+
+        <TextView
+            android:id="@+id/text_ip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:text="IP:000.000.000"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/shape_outline">
+
+            <ImageView
+                android:id="@+id/image_qr"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="16dp"
+                android:src="@mipmap/ic_launcher" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_scan"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center|bottom"
+                android:background="@drawable/shape_fix"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:text="読み取る" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:layout_margin="20dp"
+            android:onClick="pushInput"
+            tools:ignore="OnClick">
+
+            <LinearLayout
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="妥協する食事"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/text_settle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="カレー、ラーメン、すし"
+                    android:textSize="18dp"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/container_input"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="入力する"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:background="#ccffffff"
+                android:gravity="center"/>
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="7"
+            android:background="@drawable/shape_outline"
+            android:textColor="@color/colorMain"
+            android:textStyle="bold"
+            android:text="始める" />
+
+    </LinearLayout>
+
+</RelativeLayout>
